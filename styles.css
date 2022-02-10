@@ -1,0 +1,26 @@
+*{
+  margin: 0;
+}
+.boton{
+  width: 100px;
+  height: 50px;
+  background-color: #3db031;
+  margin:20px;
+  color: #ffffff;
+  transition: box-shadow 1s, border-radius 1s;
+  border: solid 1px #000000;
+}
+.boton:hover{
+  box-shadow: 2px 2px 2px #000000;
+  border-radius: 5px;
+}
+.boton:active{
+  box-shadow: inset 3px 3px 2px #000000;
+}
+.input-addres{
+  width: 500px
+}
+.input-address:hover{
+  box-shadow: 2px 2px 2px #000000;
+  border-radius: 5px;
+}
