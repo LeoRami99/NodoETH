@@ -7,21 +7,14 @@
     <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
     <script src="bootstrap/bootstrap.bundle.min.js" charset="utf-8"></script>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <!-- <link rel="stylesheet" href="/css/master.css"> -->
     <!-- Vamos a implementar la API de web3 -->
-    <script src="web3.min.js"></script>
-    <!-- <script src="web3.min.js.map"></script> -->
+    <script src="js/web3.min.js"></script>
+    <script src="conexion_web3.js"></script>
+    <!--<script src="web3.min.js.map"></script>-->
     <script>
         // a continuación vamos a construir una funcion para suministrar el web3
-        window.addEventListener('load', function() {
-            if (typeof web3 !== 'undefined') {
-                console.log("Web3 exitoso"+ web3.currentProvider.constructor.name);
-                window.web3 = new Web3(Web3.currentProvider);
-            }else{
-                console.log("No quedo bien el web3");
-                window.web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545 "));
-            }
-        })
         //Funcion
         function getBalance() {
             var address, wei, balance;
@@ -45,27 +38,30 @@
         //vamos a configurar el localhost
 
     </script>
-    <title>Document</title>
+    <title>ETH Ucundinamarca</title>
 </head>
 <body>
-      <nav class="navbar navbar-dark bg-dark">
+    <nav class="navbar">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
-          <img src="logo-nuevo-70.png" alt="" width="150" height="50" class="d-inline-block align-text-top">
-        </a>
-        <a href="crearCuenta.html" type="button" class="btn btn-outline-success">Crear Cuenta</a>
-      </div>
-    </nav>
+          <img src="logoUcundin.svg" alt="" width="200" height="200" box>
+      </a>
+      <form class="float-left">  
+        <a href="crearCuenta.html" type="button" class="btn btn-success"><i class="bi bi-person-plus-fill"></i> Crear Cuenta</a>
+        <a href="contracts.html" type="button" class="btn btn-success"><i class="bi bi-journal-code"></i> Contratos</a>
+      </form>
+  </nav>
+  </div>
 
     <form class="m-0 vh-100 row justify-content-center align-items-center" method="#">
       <div class="col-auto p-5 text-center">
-        <h1>Nodo Ethereum</h1>
+        <h1>Nodo Ethereum Universidad de Cundinamarca</h1>
         <input type="text" id="address" class="form-control input-address" placeholder="Ingrese la dirección de su cuenta">
         <button type="button" onclick="getBalance()" class="boton">Enviar</button>
         <div id="output"></div>
       </div>
     </form>
 
-
+<!--0x13220E4A2F4f42F987337A0fa11e3F58ad6Eb7a0 123456--
 </body>
 </html>
