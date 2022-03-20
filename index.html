@@ -11,18 +11,10 @@
     <!-- <link rel="stylesheet" href="/css/master.css"> -->
     <!-- Vamos a implementar la API de web3 -->
     <script src="js/web3.min.js"></script>
+    <script src="conexion_web3.js"></script>
     <!--<script src="web3.min.js.map"></script>-->
     <script>
         // a continuación vamos a construir una funcion para suministrar el web3
-        window.addEventListener('load', function() {
-            if (typeof web3 !== 'undefined') {
-                console.log("Web3 fallando"+ web3.currentProvider.constructor.name);
-                window.web3 = new Web3(Web3.currentProvider);
-            }else{
-                console.log("Web3 exitoso");
-                window.web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545 "));
-            }
-        })
         //Funcion
         function getBalance() {
             var address, wei, balance;
